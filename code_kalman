@@ -27,6 +27,8 @@ namespace KalmanPositioning
         double currentOdoVyRefTerrain = 0;
         double currentOdoVtheta = 0;
         double currentGyroVtheta = 0;
+        double currentAccAxRefRobot = 0;
+        double currentAccAyRefRobot = 0;
 
         Location kalmanLocationRefTerrain = new Location(0, 0, 0, 0, 0, 0);
                
@@ -34,7 +36,7 @@ namespace KalmanPositioning
             double freqEchOdometry, 
             double stdDev_X_GPS, double stdDev_Y_GPS, double stdDev_Th_GPS,
             double stdDev_VX_Odo, double stdDev_VY_Odo, double stdDev_VTh_Odo,
-            double stdDev_VTh_Gyro)
+            double stdDev_VTh_Gyro, double stdDev_AX_Acc, double stdDev_AY_Acc)
         {
             robotId = id;
             fEch = freqEchOdometry;
